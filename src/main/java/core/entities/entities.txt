@@ -1,0 +1,4 @@
+Entities are the heart of clean architecture and contain any enterprise-wide business rules and logic.
+Now, you might not be working in the context of an enterprise and that's perfectly fine.
+If you're writing a standalone application Uncle Bob suggests simply referring to these as Business Objects.
+The key is that they contain rules that are not application specific - so basically any global or shareable logic that could be reused in other applications should be encapsulated in an entity.

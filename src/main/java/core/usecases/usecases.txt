@@ -1,0 +1,8 @@
+Moving up from the entities we have the Use Case layer.
+
+The classes that live here have a few unique features and responsibilities:
+- Contain the application specific business rules
+- Encapsulate and implement all of the use cases of the system. A good rule to start with is a class per use case
+- Orchestrate the flow of data to and from the entities, and can rely on their business rules to achieve its goals
+- Have NO dependency and are totally isolated from things like a database, UI or special frameworks
+- Will almost certainly require refactoring if details of the use case requirements change

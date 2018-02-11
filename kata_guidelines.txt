@@ -1,0 +1,6 @@
+1) Entities have no outer dependencies
+2) UseCases have no outer dependencies
+
+
+TODO: Meter aquí los comentarios oportunos de KATA
+TODO: Sacar enunciado en castellano para imprimir, modificar de acuerdo a las nuevas specs
