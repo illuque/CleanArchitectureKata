@@ -2,6 +2,6 @@ package core.usecases.contracts.gateways.auth;
 
 public interface IAuthService {
 
-    boolean isAuthenticated();
+    boolean isAuthenticated(String studentId);
 
 }
