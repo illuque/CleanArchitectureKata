@@ -1,1 +1,7 @@
 .idea/
+target/
+kata/.~lock.exercise.odt#
+.classpath
+.project
+.settings/
+target/
