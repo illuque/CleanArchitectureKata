@@ -1,6 +1,6 @@
 package gateways.repository;
 
-import core.usecases.contracts.gateways.repository.ICourseRepository;
+import core.contracts.gateways.repository.ICourseRepository;
 import core.entities.Course;
 
 import java.util.*;

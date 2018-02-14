@@ -1,4 +1,4 @@
-package core.usecases.contracts.dto;
+package core.contracts.dto;
 
 public interface IResponseHandler<TResponse> {
 

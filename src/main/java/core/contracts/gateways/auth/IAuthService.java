@@ -1,4 +1,4 @@
-package core.usecases.contracts.gateways.auth;
+package core.contracts.gateways.auth;
 
 public interface IAuthService {
 

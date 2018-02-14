@@ -3,10 +3,10 @@ package core.usecases;
 import core.entities.Course;
 import core.entities.RegisterResult;
 import core.entities.Student;
-import core.usecases.contracts.dto.IRequestResponseHandler;
-import core.usecases.contracts.gateways.auth.IAuthService;
-import core.usecases.contracts.gateways.repository.ICourseRepository;
-import core.usecases.contracts.gateways.repository.IStudentRepository;
+import core.contracts.dto.IRequestResponseHandler;
+import core.contracts.gateways.auth.IAuthService;
+import core.contracts.gateways.repository.ICourseRepository;
+import core.contracts.gateways.repository.IStudentRepository;
 import core.usecases.dto.RegisterCourseRequestDTO;
 import core.usecases.dto.RegisterCourseResponseDTO;
 

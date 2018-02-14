@@ -1,6 +1,6 @@
 package gateways.repository;
 
-import core.usecases.contracts.gateways.repository.IStudentRepository;
+import core.contracts.gateways.repository.IStudentRepository;
 import core.entities.Course;
 import core.entities.Student;
 

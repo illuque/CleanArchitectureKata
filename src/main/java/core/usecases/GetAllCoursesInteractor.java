@@ -1,7 +1,7 @@
 package core.usecases;
 
-import core.usecases.contracts.dto.IResponseHandler;
-import core.usecases.contracts.gateways.repository.ICourseRepository;
+import core.contracts.dto.IResponseHandler;
+import core.contracts.gateways.repository.ICourseRepository;
 import core.usecases.dto.GetAllCoursesResponseDTO;
 import core.entities.Course;
 

@@ -1,4 +1,4 @@
-package core.usecases.contracts.gateways.repository;
+package core.contracts.gateways.repository;
 
 import core.entities.Student;
 
