@@ -1,4 +1,4 @@
-package gateways.controllers;
+package controllers;
 
 import core.usecases.dto.GetAllCoursesResponseDTO;
 import core.usecases.dto.RegisterCourseRequestDTO;

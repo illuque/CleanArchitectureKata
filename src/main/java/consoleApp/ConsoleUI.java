@@ -2,7 +2,7 @@ package consoleApp;
 
 import core.usecases.dto.GetAllCoursesResponseDTO;
 import core.usecases.dto.GetCourseResponseDTO;
-import gateways.controllers.ConsoleController;
+import controllers.ConsoleController;
 
 import java.io.BufferedReader;
 import java.io.IOException;
