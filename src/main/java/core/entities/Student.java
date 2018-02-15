@@ -12,10 +12,6 @@ public class Student {
 
     private List<Course> registeredCourses;
 
-    Student() {
-        this.registeredCourses = new ArrayList<>();
-    }
-
     public Student(String id, String firstName, String lastName, List<Course> registeredCourses) {
         this.id = id;
         this.firstName = firstName;

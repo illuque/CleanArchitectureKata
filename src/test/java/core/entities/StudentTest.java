@@ -22,7 +22,7 @@ public class StudentTest {
         Date courseEndDate = TestUtils.getTodayPlusNDays(100);
         Course course = new Course("JAVA101", "JAVA II", "Java sophomore course", courseStartDate, courseEndDate);
 
-        Student student = new Student();
+        Student student = new Student("s1", "Son", "Goku", null);
         RegisterResult registerSuccess = student.registerForCourse(course);
 
         Assert.assertEquals(registerSuccess, RegisterResult.OUT_OF_TIME);
@@ -47,7 +47,7 @@ public class StudentTest {
         Date startDate = TestUtils.getTodayPlusNDays(10);
         Course courseAlreadyRegistered = new Course("MONGO101", "MONGO I", "Java freshman course", startDate, null);
 
-        Student student = new Student();
+        Student student = new Student("s1", "Son", "Goku", null);
         RegisterResult registerSuccess = student.registerForCourse(courseAlreadyRegistered);
 
         Assert.assertEquals(registerSuccess, RegisterResult.SUCCESS);
