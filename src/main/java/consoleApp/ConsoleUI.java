@@ -1,8 +1,10 @@
 package consoleApp;
 
-import core.usecases.dto.GetAllCoursesResponseDTO;
-import core.usecases.dto.GetCourseResponseDTO;
 import controllers.ConsoleController;
+import gateways.repository.CourseRepositoryMemory;
+import gateways.repository.StudentRepositoryMemory;
+import unit.core.usecases.dto.GetAllCoursesResponseDTO;
+import unit.core.usecases.dto.GetCourseResponseDTO;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,6 +17,8 @@ public class ConsoleUI {
     public static void main(String[] args) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String userInput;
+
+        setupDevEnv();
 
         List<GetCourseResponseDTO> allCourses = getAllCourses();
 
@@ -68,6 +72,11 @@ public class ConsoleUI {
             }
 
         } while (!userInput.equals("quit"));
+    }
+
+    private static void setupDevEnv() {
+        CourseRepositoryMemory.seedDev();
+        StudentRepositoryMemory.seedDev();
     }
 
     private static List<GetCourseResponseDTO> getAllCourses() {

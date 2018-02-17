@@ -1,23 +1,38 @@
 package gateways.repository;
 
-import core.contracts.gateways.repository.ICourseRepository;
-import core.entities.Course;
+import unit.core.contracts.gateways.repository.ICourseRepository;
+import unit.core.entities.Course;
 
 import java.util.*;
 
 public class CourseRepositoryMemory implements ICourseRepository {
 
-    final static HashMap<String, Course> COURSE_STORE;
+    static HashMap<String, Course> COURSE_STORE;
 
     public Course getByCode(String code) {
         return COURSE_STORE.get(code);
     }
 
     public List<Course> getAll() {
-        return new ArrayList<Course>(COURSE_STORE.values());
+        return new ArrayList<>(COURSE_STORE.values());
     }
 
-    static {
+    //
+    // Testing stuff
+    //
+
+    public static void seedTest() {
+        COURSE_STORE = new HashMap<>();
+        COURSE_STORE.put(TEST_COURSE_ID, new Course(TEST_COURSE_ID, "Test", "Test Course for Testing", new Date(), new Date()));
+    }
+
+    public static final String TEST_COURSE_ID = "TestCourse";
+
+    //
+    // Develop stuff
+    //
+
+    public static void seedDev() {
         Calendar c = Calendar.getInstance();
 
         COURSE_STORE = new HashMap<>();
