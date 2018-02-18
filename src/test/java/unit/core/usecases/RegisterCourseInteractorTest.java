@@ -117,7 +117,7 @@ public class RegisterCourseInteractorTest {
     private RegisterCourseResponseDTO callRegisterCourseUseCase() {
         RegisterCourseInteractor registerUseCase = new RegisterCourseInteractor(mockedAuthService, mockedStudentRepository, mockedCourseRepository);
 
-        RegisterCourseRequestDTO useCaseRequestMessage = new RegisterCourseRequestDTO("Spiderman", "CourseThatRules");
+        RegisterCourseRequestDTO useCaseRequestMessage = new RegisterCourseRequestDTO("TestUser", "CourseThatRules");
         return registerUseCase.handle(useCaseRequestMessage);
     }
 

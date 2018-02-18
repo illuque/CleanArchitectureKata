@@ -36,10 +36,10 @@ public class StudentTest {
     @Test
     public void registerForCourse_shouldSucceedValidCourse() {
         Date startDate = TestUtils.getTodayPlusNDays(10);
-        Course courseAlreadyRegistered = new Course("MONGO101", "MONGO I", "Java freshman course", startDate, null);
+        Course newCourse = new Course("MONGO101", "MONGO I", "Java freshman course", startDate, null);
 
         Student student = new Student("s1", "Son", "Goku", null);
-        RegistrationResult registerSuccess = student.registerForCourse(courseAlreadyRegistered);
+        RegistrationResult registerSuccess = student.registerForCourse(newCourse);
 
         Assert.assertEquals(registerSuccess, RegistrationResult.SUCCESS);
     }

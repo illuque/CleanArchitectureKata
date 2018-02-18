@@ -18,6 +18,8 @@ import static org.mockito.Mockito.when;
 
 public class GetAllCoursesInteractorTest {
 
+    // TODO:2 This test is not truly "unit" because it calls Entities logic that is not mocked, check how to do that
+
     private static ICourseRepository mockedCourseRepository;
 
     private static final List<Object> mocks = new ArrayList<>();

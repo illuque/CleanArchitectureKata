@@ -1,10 +1,10 @@
 package unit.gateways.repository;
 
+import core.entities.Course;
 import gateways.repository.CourseRepositoryMemory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import core.entities.Course;
 import utils.TestUtils;
 
 import java.util.List;
@@ -26,8 +26,9 @@ public class CourseRepositoryTest {
 
     @Test
     public void getByCode_shouldFindACourse() {
-        Course course = courseRepository.getByCode("fake");
-        Assert.assertNull(course);
+        Course course = courseRepository.getByCode(TestUtils.TEST_COURSE_ID);
+        Assert.assertNotNull(course);
+        Assert.assertEquals(course.getCode(), TestUtils.TEST_COURSE_ID);
     }
 
     @Test
