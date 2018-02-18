@@ -99,7 +99,7 @@ public class ConsoleUI {
 
     private static void printMenu(List<GetCourseResponseDTO> allCourses) {
         System.out.println();
-        System.out.println("Select one of the following courses:");
+        System.out.println("COURSE CATALOG");
         System.out.println();
 
         for (GetCourseResponseDTO c : allCourses) {
