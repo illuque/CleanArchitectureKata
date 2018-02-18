@@ -47,8 +47,8 @@ public class Student {
     /*
         KATA
 
-        Question: Is this domain logic or should be in a useCase?
-      */
+        Question: Is this domain/entities logic or should be in a useCase?
+    */
 
     public RegistrationResult registerForCourse(final Course course) {
         if (isAlreadyRegistered(course)) {

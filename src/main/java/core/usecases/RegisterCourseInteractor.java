@@ -55,6 +55,11 @@ public class RegisterCourseInteractor implements IRequestResponseHandler<Registe
             return getRegisterErrorResponse(registrationResult);
         }
 
+        /*
+            KATA
+
+            Question: Is this UseCase logic or should be in domain/entities?
+        */
         int courseOpenDaysBeforeStarting = 5;
         if (!course.isRegisterOpen(courseOpenDaysBeforeStarting)) {
             return getRegisterErrorResponse(RegistrationResult.OUT_OF_TIME);
