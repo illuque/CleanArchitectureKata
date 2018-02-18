@@ -1,4 +1,4 @@
-Moving up from the entities we have the Use Case layer.
+Moving up from the entities we have the Use Case layer. It's common to also call them Interactors.
 
 The classes that live here have a few unique features and responsibilities:
 - Contain the application specific business rules

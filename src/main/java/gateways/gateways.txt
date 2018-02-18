@@ -1,5 +1,5 @@
-// TODO:1 Ver todos estos ficheros
+The purpose of the Interface Adapter Layer is to act as a connector between the business logic in our Interactors
+(UseCases) and our framework-specific code. For example, in an ASP.Net MVC app, this is where the models, views, and
+controllers live.
 
-The purpose of the interface adapter layer is to act as a connector between the business logic in our interactors and
-our framework-specific code. For example, in an ASP.Net MVC app, this is where the models, views, and controllers live.
-Gateways like services and repositories to access database are also implemented here.
+Gateway-like services and repositories to access database are also implemented here.

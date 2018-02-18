@@ -1,3 +1,5 @@
-One key aspect of the DTO's that flow in and out of use case interactors and across boundaries is that they are
-simple data structures meaning they contain no special types: ie. entities, or types provided by 3rd party libs etc.
+DTO = Data Transfer Objects
+
+One key aspect of the DTO's that flow in and out of use case Interactors (UseCases) and across boundaries is that they
+are simple data structures meaning they contain no special types: ie. entities, or types provided by 3rd party libs etc.
 They are pure <C#, java, javascript> objects.
