@@ -16,14 +16,14 @@ import unit.core.usecases.dto.errors.RegistrationError;
 
     This interactor just takes a request object as parameter, typically contains any data passed in from the outer
     input layer (typically the UI) and returns a response object. Both DTO types are dictated by the IRequestResponseHandler
-    interface. All of our application specific logic for the use case will go into this method.f
+    interface. All of our application specific logic for the use case will be implemented in this method.
  */
 public class RegisterCourseInteractor implements IRequestResponseHandler<RegisterCourseRequestDTO, RegisterCourseResponseDTO> {
 
     /*
         KATA
 
-        This gateways services are usually injected into the Use Case layer with dependency injection (IoC)
+        This gateways services are usually injected into the Use Case layer with Dependency Injection & IoC
     */
     private IStudentRepository studentRepository;
     private ICourseRepository courseRepository;

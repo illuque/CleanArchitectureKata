@@ -44,7 +44,6 @@ public class Student {
         return this.registeredCourses;
     }
 
-    // TODO:1 Check all Kata comments
     /*
         KATA
 

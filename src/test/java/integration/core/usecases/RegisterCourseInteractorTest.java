@@ -13,9 +13,9 @@ import utils.TestUtils;
 
 public class RegisterCourseInteractorTest {
 
-    private static AuthServiceMemory authService = new AuthServiceMemory();
-    private static CourseRepositoryMemory courseRepository = new CourseRepositoryMemory();
-    private static StudentRepositoryMemory studentRepository = new StudentRepositoryMemory();
+    private static final AuthServiceMemory authService = new AuthServiceMemory();
+    private static final CourseRepositoryMemory courseRepository = new CourseRepositoryMemory();
+    private static final StudentRepositoryMemory studentRepository = new StudentRepositoryMemory();
 
     @Before
     public void seedTest() {

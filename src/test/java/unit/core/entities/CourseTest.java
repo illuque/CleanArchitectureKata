@@ -14,8 +14,6 @@ import java.util.Date;
  */
 public class CourseTest {
 
-    // TODO:1 pasar toda la batería de tests
-
     @Test
     public void registerIsNotOpenWithin5DaysOfStartDate() {
         Date courseStartDate = TestUtils.getTodayPlusNDays(3);

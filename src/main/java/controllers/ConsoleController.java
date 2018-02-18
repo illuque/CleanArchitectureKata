@@ -14,14 +14,14 @@ public class ConsoleController {
     /*
         KATA
 
-        Init gateways, in a real app these would get wired up via IoC
+        Init gateways, in a real app these would get wired up via Dependency Injection & IoC
     */
-    private static AuthServiceMemory AUTH_SERVICE = new AuthServiceMemory();
-    private static CourseRepositoryMemory COURSE_REPOSITORY = new CourseRepositoryMemory();
-    private static StudentRepositoryMemory STUDENT_REPOSITORY = new StudentRepositoryMemory();
+    private static final AuthServiceMemory authService = new AuthServiceMemory();
+    private static final CourseRepositoryMemory courseRepository = new CourseRepositoryMemory();
+    private static final StudentRepositoryMemory studentRepository = new StudentRepositoryMemory();
 
     public static GetAllCoursesResponseDTO getAllCourses() {
-        return new GetAllCoursesInteractor(COURSE_REPOSITORY).handle();
+        return new GetAllCoursesInteractor(courseRepository).handle();
     }
 
     public static String registerCourse(String studentId, String courseCode) {
@@ -30,11 +30,11 @@ public class ConsoleController {
             KATA
 
             Here we're connecting our app framework layer with our Use Case Interactors
-            This would typically go in a Controller Action in an MVC context
+            This would typically be implemented in a Controller Action in an MVC context
         */
 
         // 1. instantiate Course Registration Use Case injecting Gateways implemented in this layer
-        RegisterCourseInteractor courseRegistrationRequestUseCase = new RegisterCourseInteractor(AUTH_SERVICE, STUDENT_REPOSITORY, COURSE_REPOSITORY);
+        RegisterCourseInteractor courseRegistrationRequestUseCase = new RegisterCourseInteractor(authService, studentRepository, courseRepository);
 
         // 2. create the request message passing with the target student id and a list of selected course codes
         String inputCourseCode = courseCode.toUpperCase();

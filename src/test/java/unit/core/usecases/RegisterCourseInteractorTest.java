@@ -25,8 +25,9 @@ import static org.mockito.Mockito.when;
 /*
     KATA
 
-    This tests are very fast, since they use just mocked repositories and authService
-    We are unit testing the UseCases without going towards Database, but an integration test using Database is required
+    This tests are very fast, since they use just mocked repositories and external services
+    We are unit testing the UseCases without going towards real databases and services, but an integration test using
+    "real world" resources is also required (nevertheless, the number of integration tests will/should be smaller)
  */
 public class RegisterCourseInteractorTest {
 
@@ -36,17 +37,17 @@ public class RegisterCourseInteractorTest {
     private static ICourseRepository mockedCourseRepository;
     private static IStudentRepository mockedStudentRepository;
 
-    private static final List<Object> MOCKS = new ArrayList<>();
+    private static final List<Object> mocks = new ArrayList<>();
 
     static {
-        MOCKS.add(mockedAuthService = mock(IAuthService.class));
-        MOCKS.add(mockedCourseRepository = mock(ICourseRepository.class));
-        MOCKS.add(mockedStudentRepository = mock(IStudentRepository.class));
+        mocks.add(mockedAuthService = mock(IAuthService.class));
+        mocks.add(mockedCourseRepository = mock(ICourseRepository.class));
+        mocks.add(mockedStudentRepository = mock(IStudentRepository.class));
     }
 
     @After
     public void unMock() {
-        for (Object mock : MOCKS) {
+        for (Object mock : mocks) {
             Mockito.reset(mock);
         }
     }
