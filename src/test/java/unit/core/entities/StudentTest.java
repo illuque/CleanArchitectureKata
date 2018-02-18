@@ -1,8 +1,11 @@
 package unit.core.entities;
 
-import utils.TestUtils;
+import core.entities.Course;
+import core.entities.RegistrationResult;
+import core.entities.Student;
 import org.junit.Assert;
 import org.junit.Test;
+import utils.TestUtils;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,7 +20,7 @@ import java.util.List;
 public class StudentTest {
 
     @Test
-    public void shouldFailRegistrationAlreadyRegistered() {
+    public void registerForCourse_shouldFailAlreadyRegistered() {
         Date startDate = TestUtils.getTodayPlusNDays(10);
         Course courseAlreadyRegistered = new Course("JAVA101", "JAVA II", "Java sophomore course", startDate, null);
 
@@ -31,7 +34,7 @@ public class StudentTest {
     }
 
     @Test
-    public void shouldSucceedRegistrationWhenValidCourse() {
+    public void registerForCourse_shouldSucceedValidCourse() {
         Date startDate = TestUtils.getTodayPlusNDays(10);
         Course courseAlreadyRegistered = new Course("MONGO101", "MONGO I", "Java freshman course", startDate, null);
 

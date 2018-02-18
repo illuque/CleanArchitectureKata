@@ -1,10 +1,10 @@
 package controllers;
 
-import unit.core.usecases.dto.GetAllCoursesResponseDTO;
-import unit.core.usecases.dto.RegisterCourseRequestDTO;
-import unit.core.usecases.dto.RegisterCourseResponseDTO;
-import unit.core.usecases.GetAllCoursesInteractor;
-import unit.core.usecases.RegisterCourseInteractor;
+import core.usecases.dto.GetAllCoursesResponseDTO;
+import core.usecases.dto.RegisterCourseRequestDTO;
+import core.usecases.dto.RegisterCourseResponseDTO;
+import core.usecases.GetAllCoursesInteractor;
+import core.usecases.RegisterCourseInteractor;
 import gateways.auth.AuthServiceMemory;
 import gateways.repository.CourseRepositoryMemory;
 import gateways.repository.StudentRepositoryMemory;

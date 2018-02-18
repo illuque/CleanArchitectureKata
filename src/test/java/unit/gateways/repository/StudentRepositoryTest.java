@@ -1,10 +1,10 @@
-package unit.gateways;
+package unit.gateways.repository;
 
 import gateways.repository.StudentRepositoryMemory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import unit.core.entities.Student;
+import core.entities.Student;
 import utils.TestUtils;
 
 public class StudentRepositoryTest {

@@ -1,10 +1,10 @@
-package unit.gateways;
+package unit.gateways.repository;
 
 import gateways.repository.CourseRepositoryMemory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import unit.core.entities.Course;
+import core.entities.Course;
 import utils.TestUtils;
 
 import java.util.List;
@@ -31,7 +31,7 @@ public class CourseRepositoryTest {
     }
 
     @Test
-    public void getByCode_shouldFindAllCourses() {
+    public void getAll_shouldFindAllCourses() {
         List<Course> allCourses = courseRepository.getAll();
         Assert.assertNotNull(allCourses);
         Assert.assertEquals(allCourses.size(), 1);

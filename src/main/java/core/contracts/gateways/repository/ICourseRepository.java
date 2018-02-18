@@ -1,6 +1,6 @@
-package unit.core.contracts.gateways.repository;
+package core.contracts.gateways.repository;
 
-import unit.core.entities.Course;
+import core.entities.Course;
 
 import java.util.List;
 

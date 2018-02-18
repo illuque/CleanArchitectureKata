@@ -1,6 +1,6 @@
-package unit.core.usecases.dto;
+package core.usecases.dto;
 
-import unit.core.usecases.dto.errors.RegistrationError;
+import core.usecases.dto.errors.RegistrationError;
 
 public class RegisterCourseResponseDTO {
     private boolean success;

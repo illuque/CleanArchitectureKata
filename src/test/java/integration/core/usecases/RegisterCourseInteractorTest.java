@@ -6,9 +6,9 @@ import gateways.repository.StudentRepositoryMemory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import unit.core.usecases.RegisterCourseInteractor;
-import unit.core.usecases.dto.RegisterCourseRequestDTO;
-import unit.core.usecases.dto.RegisterCourseResponseDTO;
+import core.usecases.RegisterCourseInteractor;
+import core.usecases.dto.RegisterCourseRequestDTO;
+import core.usecases.dto.RegisterCourseResponseDTO;
 import utils.TestUtils;
 
 public class RegisterCourseInteractorTest {
@@ -23,7 +23,7 @@ public class RegisterCourseInteractorTest {
     }
 
     @Test
-    public void shouldSucceedRegistrationWhenValidStudentAndCourse() {
+    public void shouldSucceedRegistrationWhenValidStudentCourseAndDate() {
         RegisterCourseInteractor registerUseCase = new RegisterCourseInteractor(authService, studentRepository, courseRepository);
 
         RegisterCourseRequestDTO useCaseRequestMessage = new RegisterCourseRequestDTO(TestUtils.TEST_STUDENT_ID, TestUtils.TEST_COURSE_ID);

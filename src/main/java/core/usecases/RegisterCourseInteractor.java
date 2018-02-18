@@ -1,15 +1,15 @@
-package unit.core.usecases;
+package core.usecases;
 
-import unit.core.contracts.dto.IRequestResponseHandler;
-import unit.core.contracts.gateways.auth.IAuthService;
-import unit.core.contracts.gateways.repository.ICourseRepository;
-import unit.core.contracts.gateways.repository.IStudentRepository;
-import unit.core.entities.Course;
-import unit.core.entities.RegistrationResult;
-import unit.core.entities.Student;
-import unit.core.usecases.dto.RegisterCourseRequestDTO;
-import unit.core.usecases.dto.RegisterCourseResponseDTO;
-import unit.core.usecases.dto.errors.RegistrationError;
+import core.contracts.dto.IRequestResponseHandler;
+import core.contracts.gateways.repository.ICourseRepository;
+import core.contracts.gateways.repository.IStudentRepository;
+import core.entities.Course;
+import core.entities.RegistrationResult;
+import core.entities.Student;
+import core.usecases.dto.RegisterCourseRequestDTO;
+import core.usecases.dto.RegisterCourseResponseDTO;
+import core.usecases.dto.errors.RegistrationError;
+import core.contracts.gateways.auth.IAuthService;
 
 /*
     KATA

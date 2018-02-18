@@ -1,4 +1,4 @@
-package unit.core.entities;
+package core.entities;
 
 import java.util.ArrayList;
 import java.util.List;

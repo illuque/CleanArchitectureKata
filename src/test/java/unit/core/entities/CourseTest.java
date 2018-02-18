@@ -1,8 +1,9 @@
 package unit.core.entities;
 
-import utils.TestUtils;
+import core.entities.Course;
 import org.junit.Assert;
 import org.junit.Test;
+import utils.TestUtils;
 
 import java.util.Date;
 
@@ -15,7 +16,7 @@ import java.util.Date;
 public class CourseTest {
 
     @Test
-    public void registerIsNotOpenWithin5DaysOfStartDate() {
+    public void isRegisterOpen_shouldBeNotOpenAfterLimitDay() {
         Date courseStartDate = TestUtils.getTodayPlusNDays(3);
         Date courseEndDate = TestUtils.getTodayPlusNDays(100);
         Course course = new Course("BIOL-1507EL", "Biology II", "Biology course, level II", courseStartDate, courseEndDate);
@@ -24,7 +25,7 @@ public class CourseTest {
     }
 
     @Test
-    public void registerIsNotOpenExactly5DaysOfStartDate() {
+    public void isRegisterOpen_shouldBeNotOpenOnLimitDay() {
         Date courseStartDate = TestUtils.getTodayPlusNDays(5);
         Date courseEndDate = TestUtils.getTodayPlusNDays(100);
         Course course = new Course("BIOL-1507EL", "Biology II", "Biology course, level II", courseStartDate, courseEndDate);
@@ -33,7 +34,7 @@ public class CourseTest {
     }
 
     @Test
-    public void registerIsOpen10DaysOfStartDate() {
+    public void isRegisterOpen_shouldBeOpenBeforeLimitDay() {
         Date courseStartDate = TestUtils.getTodayPlusNDays(11);
         Date courseEndDate = TestUtils.getTodayPlusNDays(100);
         Course course = new Course("BIOL-1507EL", "Biology II", "Biology course, level II", courseStartDate, courseEndDate);

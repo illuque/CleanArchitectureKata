@@ -1,4 +1,4 @@
-package unit.core.usecases.dto;
+package core.usecases.dto;
 
 public class RegisterCourseRequestDTO {
 

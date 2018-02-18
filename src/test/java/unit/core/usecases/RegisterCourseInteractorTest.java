@@ -1,17 +1,18 @@
 package unit.core.usecases;
 
+import core.contracts.gateways.repository.IStudentRepository;
+import core.entities.Student;
+import core.usecases.RegisterCourseInteractor;
+import core.usecases.dto.RegisterCourseResponseDTO;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.Mockito;
-import unit.core.contracts.gateways.auth.IAuthService;
-import unit.core.contracts.gateways.repository.ICourseRepository;
-import unit.core.contracts.gateways.repository.IStudentRepository;
-import unit.core.entities.Course;
-import unit.core.entities.Student;
-import unit.core.usecases.dto.RegisterCourseRequestDTO;
-import unit.core.usecases.dto.RegisterCourseResponseDTO;
-import unit.core.usecases.dto.errors.RegistrationError;
+import core.contracts.gateways.auth.IAuthService;
+import core.contracts.gateways.repository.ICourseRepository;
+import core.entities.Course;
+import core.usecases.dto.RegisterCourseRequestDTO;
+import core.usecases.dto.errors.RegistrationError;
 import utils.TestUtils;
 
 import java.util.ArrayList;
@@ -53,7 +54,7 @@ public class RegisterCourseInteractorTest {
     }
 
     @Test
-    public void shouldFailRegistrationStudentNotAuthenticated() {
+    public void shouldFailRegistrationWhenStudentNotAuthenticated() {
         this.stubAuthServiceIsAuthenticatedReturnFalse();
         this.stubStudentRepositoryGetByIdReturnNull();
         this.stubCourseRepositoryGetByCodeReturnValid();
@@ -65,7 +66,7 @@ public class RegisterCourseInteractorTest {
     }
 
     @Test
-    public void shouldFailRegistrationStudentNotFound() {
+    public void shouldFailRegistrationWhenStudentNotFound() {
         this.stubAuthServiceIsAuthenticatedReturnTrue();
         this.stubStudentRepositoryGetByIdReturnNull();
         this.stubCourseRepositoryGetByCodeReturnValid();
@@ -77,7 +78,7 @@ public class RegisterCourseInteractorTest {
     }
 
     @Test
-    public void shouldFailRegistrationCourseNotFound() {
+    public void shouldFailRegistrationWhenCourseNotFound() {
         this.stubAuthServiceIsAuthenticatedReturnTrue();
         this.stubStudentRepositoryGetByIdReturnValid();
         this.stubCourseRepositoryGetByCodeReturnNull();
@@ -89,13 +90,13 @@ public class RegisterCourseInteractorTest {
     }
 
     @Test
-    public void shouldFailRegistrationOutOfTime() {
+    public void shouldFailRegistrationWhenOutOfTime() {
         // TODO:2 Check how to test this, to be truly an unit test we would need to mock all Student and Course instances, alreadyRegistered() is allocated in Student Entity and isRegisterOpen() in Course Entity
 
     }
 
     @Test
-    public void shouldFailRegistrationAlreadyRegistered() {
+    public void shouldFailRegistrationWhenAlreadyRegistered() {
         // TODO:2 Check how to test this, to be truly an unit test we would need to mock all Student instances, alreadyRegistered() is allocated in Student Entity
     }
 

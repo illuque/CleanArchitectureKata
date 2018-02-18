@@ -1,4 +1,4 @@
-package unit.core.contracts.dto;
+package core.contracts.dto;
 
 public interface IRequestResponseHandler<TRequest, TResponse> {
 

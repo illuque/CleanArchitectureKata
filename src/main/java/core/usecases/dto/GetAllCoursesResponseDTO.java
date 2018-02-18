@@ -1,6 +1,6 @@
-package unit.core.usecases.dto;
+package core.usecases.dto;
 
-import unit.core.entities.Course;
+import core.entities.Course;
 
 import java.util.ArrayList;
 import java.util.List;

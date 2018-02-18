@@ -1,6 +1,6 @@
 package gateways.auth;
 
-import unit.core.contracts.gateways.auth.IAuthService;
+import core.contracts.gateways.auth.IAuthService;
 
 public class AuthServiceMemory implements IAuthService {
 

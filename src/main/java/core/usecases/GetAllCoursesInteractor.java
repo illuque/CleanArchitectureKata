@@ -1,9 +1,9 @@
-package unit.core.usecases;
+package core.usecases;
 
-import unit.core.contracts.dto.IResponseHandler;
-import unit.core.contracts.gateways.repository.ICourseRepository;
-import unit.core.usecases.dto.GetAllCoursesResponseDTO;
-import unit.core.entities.Course;
+import core.contracts.dto.IResponseHandler;
+import core.contracts.gateways.repository.ICourseRepository;
+import core.entities.Course;
+import core.usecases.dto.GetAllCoursesResponseDTO;
 
 import java.util.List;
 

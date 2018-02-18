@@ -1,6 +1,6 @@
-package unit.core.contracts.gateways.repository;
+package core.contracts.gateways.repository;
 
-import unit.core.entities.Student;
+import core.entities.Student;
 
 public interface IStudentRepository {
 

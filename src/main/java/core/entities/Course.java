@@ -1,4 +1,4 @@
-package unit.core.entities;
+package core.entities;
 
 import java.util.Calendar;
 import java.util.Date;

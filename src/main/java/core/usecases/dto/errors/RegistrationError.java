@@ -1,6 +1,6 @@
-package unit.core.usecases.dto.errors;
+package core.usecases.dto.errors;
 
-import unit.core.entities.RegistrationResult;
+import core.entities.RegistrationResult;
 
 public enum RegistrationError {
 

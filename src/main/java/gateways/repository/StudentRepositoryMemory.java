@@ -1,8 +1,8 @@
 package gateways.repository;
 
-import unit.core.contracts.gateways.repository.IStudentRepository;
-import unit.core.entities.Course;
-import unit.core.entities.Student;
+import core.contracts.gateways.repository.IStudentRepository;
+import core.entities.Course;
+import core.entities.Student;
 
 import java.util.ArrayList;
 import java.util.HashMap;

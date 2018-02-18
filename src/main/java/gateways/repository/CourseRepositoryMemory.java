@@ -1,7 +1,7 @@
 package gateways.repository;
 
-import unit.core.contracts.gateways.repository.ICourseRepository;
-import unit.core.entities.Course;
+import core.contracts.gateways.repository.ICourseRepository;
+import core.entities.Course;
 
 import java.util.*;
 

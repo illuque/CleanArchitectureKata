@@ -3,8 +3,8 @@ package consoleApp;
 import controllers.ConsoleController;
 import gateways.repository.CourseRepositoryMemory;
 import gateways.repository.StudentRepositoryMemory;
-import unit.core.usecases.dto.GetAllCoursesResponseDTO;
-import unit.core.usecases.dto.GetCourseResponseDTO;
+import core.usecases.dto.GetAllCoursesResponseDTO;
+import core.usecases.dto.GetCourseResponseDTO;
 
 import java.io.BufferedReader;
 import java.io.IOException;

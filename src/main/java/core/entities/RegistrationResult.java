@@ -1,4 +1,4 @@
-package unit.core.entities;
+package core.entities;
 
 public enum RegistrationResult {
     SUCCESS,
