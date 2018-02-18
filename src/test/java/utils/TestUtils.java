@@ -8,9 +8,13 @@ import java.util.Date;
 
 public class TestUtils {
 
+    public static final String TEST_STUDENT_ID = "TestStudent";
+
+    public static final String TEST_COURSE_ID = "TestCourse";
+
     public static void seedTest() {
-        CourseRepositoryMemory.seedTest();
-        StudentRepositoryMemory.seedTest();
+        CourseRepositoryMemory.seedTest(TEST_COURSE_ID);
+        StudentRepositoryMemory.seedTest(TEST_STUDENT_ID);
     }
 
     public static Date getTodayPlusNDays(int days) {

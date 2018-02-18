@@ -24,20 +24,20 @@ public class StudentRepositoryTest {
 
     @Test
     public void getById_shouldFindAStudent() {
-        Student student = studentRepository.getById(StudentRepositoryMemory.TEST_STUDENT_ID);
+        Student student = studentRepository.getById(TestUtils.TEST_STUDENT_ID);
         Assert.assertNotNull(student);
     }
 
     @Test
     public void save_shouldSaveModifiedStudent() {
-        Student studentToModify = StudentRepositoryMemory.getTestStudentFromStore();
+        Student studentToModify = StudentRepositoryMemory.getTestStudentFromStore(TestUtils.TEST_STUDENT_ID);
 
         String newLastName = "Goanda";
         studentToModify.setLastName(newLastName);
 
         studentRepository.save(studentToModify);
 
-        Student studentModified = StudentRepositoryMemory.getTestStudentFromStore();
+        Student studentModified = StudentRepositoryMemory.getTestStudentFromStore(TestUtils.TEST_STUDENT_ID);
         Assert.assertEquals(studentModified.getLastName(), studentToModify.getLastName());
     }
 

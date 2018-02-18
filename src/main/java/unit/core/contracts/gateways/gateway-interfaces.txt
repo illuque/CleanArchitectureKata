@@ -1,0 +1,7 @@
+These services are typically referred to as Gateways within clean architecture and get injected into the Use Case layer
+as per the dependency rule (IoC). These are the things that deal with the database, rest services or other external
+agencies and their implementation belongs in the Interface Adapters layer.
+
+Interactors (UseCases) only know what behavior these gateways offer by way of their interface definition. They have no
+idea how they do their work because those details are encapsulated in an outer layer which the Use Cases know nothing
+about.

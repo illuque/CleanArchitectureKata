@@ -7,7 +7,11 @@ import java.util.*;
 
 public class CourseRepositoryMemory implements ICourseRepository {
 
-    static HashMap<String, Course> COURSE_STORE;
+    private static HashMap<String, Course> COURSE_STORE;
+
+    //
+    // API
+    //
 
     public Course getByCode(String code) {
         return COURSE_STORE.get(code);
@@ -21,16 +25,29 @@ public class CourseRepositoryMemory implements ICourseRepository {
     // Testing stuff
     //
 
-    public static void seedTest() {
+    public static void seedTest(String courseId) {
         COURSE_STORE = new HashMap<>();
-        COURSE_STORE.put(TEST_COURSE_ID, new Course(TEST_COURSE_ID, "Test", "Test Course for Testing", new Date(), new Date()));
-    }
 
-    public static final String TEST_COURSE_ID = "TestCourse";
+        Calendar c = Calendar.getInstance();
+        c.add(Calendar.DATE, 10);
+        Date startDate = c.getTime();
+
+        c.add(Calendar.DATE, 100);
+        Date endDate = c.getTime();
+
+        COURSE_STORE.put(courseId, new Course(courseId, "Test", "Test Course for Testing", startDate, endDate));
+    }
 
     //
     // Develop stuff
     //
+
+    /**
+     * This method exists for Demo purposes, to have a working example with a user already registered into a course
+     */
+    static Course getExistingCourse() {
+        return COURSE_STORE.get("JAVA101");
+    }
 
     public static void seedDev() {
         Calendar c = Calendar.getInstance();

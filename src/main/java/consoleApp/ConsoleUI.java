@@ -18,7 +18,7 @@ public class ConsoleUI {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String userInput;
 
-        setupDevEnv();
+        sampleSeed();
 
         List<GetCourseResponseDTO> allCourses = getAllCourses();
 
@@ -74,7 +74,7 @@ public class ConsoleUI {
         } while (!userInput.equals("quit"));
     }
 
-    private static void setupDevEnv() {
+    private static void sampleSeed() {
         CourseRepositoryMemory.seedDev();
         StudentRepositoryMemory.seedDev();
     }

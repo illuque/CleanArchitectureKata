@@ -12,6 +12,10 @@ public class StudentRepositoryMemory implements IStudentRepository {
 
     private static HashMap<String, Student> STUDENT_STORE;
 
+    //
+    // API
+    //
+
     public Student getById(String id) {
         return STUDENT_STORE.get(id);
     }
@@ -20,23 +24,22 @@ public class StudentRepositoryMemory implements IStudentRepository {
         STUDENT_STORE.put(student.getId(), student);
     }
 
-    // Testing stuff
+    // Test stuff
 
     /**
      * Exists only for testing purposes and taking into account that this is a dummy memory database
-     * In a real database, this would be substituted by direct queries to check results without calling other repo methods
+     * In a real world example with an actual database, this would be substituted by direct queries to check results
+     * without calling tested or any other repo method
      */
-    public static Student getTestStudentFromStore() {
-        Student studentToClone = STUDENT_STORE.get(TEST_STUDENT_ID);
+    public static Student getTestStudentFromStore(String studentId) {
+        Student studentToClone = STUDENT_STORE.get(studentId);
         return new Student(studentToClone.getId(), studentToClone.getFirstName(), studentToClone.getLastName(), studentToClone.getRegisteredCourses());
     }
 
-    public static void seedTest() {
+    public static void seedTest(String studentId) {
         STUDENT_STORE = new HashMap<>();
-        STUDENT_STORE.put(TEST_STUDENT_ID, new Student(TEST_STUDENT_ID, "Test", "User", null));
+        STUDENT_STORE.put(studentId, new Student(studentId, "Test", "User", null));
     }
-
-    public static final String TEST_STUDENT_ID = "TestStudent";
 
     //
     // Develop stuff
@@ -47,7 +50,10 @@ public class StudentRepositoryMemory implements IStudentRepository {
 
         final String SPIDERMAN_ID = "Spiderman";
         List<Course> courseList = new ArrayList<>();
-        courseList.add(CourseRepositoryMemory.COURSE_STORE.get("JAVA101"));
+        /*
+         * This is done for Demo purposes, to have a working example with a user already registered into a course
+         */
+        courseList.add(CourseRepositoryMemory.getExistingCourse());
         STUDENT_STORE.put(SPIDERMAN_ID, new Student(SPIDERMAN_ID, "Peter", "Parker", courseList));
 
         final String BATMAN_ID = "Batman";

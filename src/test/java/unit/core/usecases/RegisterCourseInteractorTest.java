@@ -36,7 +36,7 @@ public class RegisterCourseInteractorTest {
     private static ICourseRepository mockedCourseRepository;
     private static IStudentRepository mockedStudentRepository;
 
-    private static List<Object> MOCKS = new ArrayList<>();
+    private static final List<Object> MOCKS = new ArrayList<>();
 
     static {
         MOCKS.add(mockedAuthService = mock(IAuthService.class));

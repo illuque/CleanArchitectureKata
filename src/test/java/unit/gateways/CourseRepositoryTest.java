@@ -35,7 +35,7 @@ public class CourseRepositoryTest {
         List<Course> allCourses = courseRepository.getAll();
         Assert.assertNotNull(allCourses);
         Assert.assertEquals(allCourses.size(), 1);
-        Assert.assertEquals(allCourses.get(0).getCode(), CourseRepositoryMemory.TEST_COURSE_ID);
+        Assert.assertEquals(allCourses.get(0).getCode(), TestUtils.TEST_COURSE_ID);
     }
 
 }
